@@ -1,0 +1,29 @@
+backend:
+  name: github
+  repo: staslavrenchuk/tiling-site # замени на свой репозиторий, если изменится
+  branch: main
+
+media_folder: "images/uploads"   # сюда будут загружаться картинки
+public_folder: "/images/uploads"
+
+collections:
+  - name: "services"
+    label: "Услуги"
+    folder: "content/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Название", name: "title", widget: "string" }
+      - { label: "Описание", name: "description", widget: "text" }
+      - { label: "Цена", name: "price", widget: "string" }
+      - { label: "Фото", name: "image", widget: "image" }
+
+  - name: "portfolio"
+    label: "Портфолио"
+    folder: "content/portfolio"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Название", name: "title", widget: "string" }
+      - { label: "Описание", name: "description", widget: "markdown" }
+      - { label: "Фото", name: "image", widget: "image" }
