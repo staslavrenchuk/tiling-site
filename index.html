@@ -17,7 +17,6 @@
     <h1 class="text-xl sm:text-3xl md:text-4xl font-bold mb-6 text-white">Облицовка керамогранитом любого формата в Минске и не только</h1>
     <div class="flex gap-4 justify-center flex-wrap">
       <button onclick="document.getElementById('phoneModal').classList.remove('hidden')" class="px-6 py-3 bg-blue-600 text-white rounded-2xl shadow hover:bg-blue-700">Позвонить</button>
-      <button onclick="document.getElementById('formModal').classList.remove('hidden')" class="px-6 py-3 bg-green-600 text-white rounded-2xl shadow hover:bg-green-700">Оставить заявку</button>
     </div>
   </div>
 </section>
@@ -145,7 +144,7 @@
   </div>
 </section>
 
-<!-- Contacts Section with real Formspree form and captcha -->
+<!-- Contacts Section (without form) -->
 <section id="contacts" class="py-16 bg-gray-50 text-gray-900 scroll-fade opacity-0 translate-y-8 transition-all duration-700">
   <div class="container mx-auto px-4 max-w-5xl">
     <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Контакты</h2>
@@ -155,26 +154,10 @@
       <p>Телефон: <a href="tel:+375336775312" class="text-blue-600 hover:underline">+375-33-6775312</a> (Мобильный, Viber, WhatsApp)</p>
       <p>Telegram: <a href="https://t.me/stanislav_lvr" target="_blank" class="text-blue-600 hover:underline">@stanislav_lvr</a></p>
     </div>
-
-    <!-- Form -->
-    <div class="max-w-xl mx-auto bg-white rounded-2xl shadow p-6">
-      <h3 class="text-xl font-semibold mb-4 text-center">Оставьте заявку</h3>
-      <form id="contactForm" class="flex flex-col gap-4">
-        <input type="text" name="name" placeholder="Имя" class="border rounded-lg p-2 w-full" required>
-        <textarea name="message" placeholder="Текст обращения" rows="3" class="border rounded-lg p-2 w-full" required></textarea>
-        <input type="text" name="contact" placeholder="Как с вами связаться" class="border rounded-lg p-2 w-full" required>
-        <div class="flex gap-2 items-center">
-          <label for="captcha">1 + 8 =</label>
-          <input type="text" id="captcha" placeholder="Ответ" class="border rounded-lg p-2 w-full" required>
-        </div>
-        <button type="submit" class="px-6 py-3 bg-green-600 text-white rounded-2xl shadow hover:bg-green-700">Отправить</button>
-      </form>
-      <p id="formMessage" class="text-center mt-4 text-green-600 font-semibold hidden">Форма успешно отправлена!</p>
-    </div>
   </div>
 </section>
 
-<!-- Modals -->
+<!-- Phone Modal -->
 <div id="phoneModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
   <div class="bg-white rounded-2xl shadow-lg p-6 max-w-sm text-center">
     <h2 class="text-xl font-bold mb-4">Позвоните нам</h2>
@@ -183,28 +166,8 @@
   </div>
 </div>
 
-<div id="formModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-  <div class="bg-white rounded-2xl shadow-lg p-6 max-w-md w-full">
-    <h2 class="text-xl font-bold mb-4 text-center">Оставьте заявку</h2>
-    <form id="modalForm" class="flex flex-col gap-4">
-      <input type="text" name="name" placeholder="Имя" class="border rounded-lg p-2 w-full">
-      <textarea name="message" placeholder="Текст обращения" rows="3" class="border rounded-lg p-2 w-full"></textarea>
-      <input type="text" name="contact" placeholder="Как с вами связаться" class="border rounded-lg p-2 w-full">
-      <div class="flex gap-2 items-center">
-        <label for="captchaModal">1 + 8 =</label>
-        <input type="text" id="captchaModal" placeholder="Ответ" class="border rounded-lg p-2 w-full">
-      </div>
-      <button type="submit" class="px-6 py-3 bg-green-600 text-white rounded-2xl shadow hover:bg-green-700">Отправить</button>
-    </form>
-    <div class="text-center mt-4">
-      <button onclick="document.getElementById('formModal').classList.add('hidden')" type="button" class="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700">Закрыть</button>
-    </div>
-  </div>
-</div>
-
-<!-- Scroll Fade & Form Scripts -->
+<!-- Scroll Fade Script -->
 <script>
-  // Scroll fade
   const faders = document.querySelectorAll('.scroll-fade');
   const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
   const appearOnScroll = new IntersectionObserver((entries, observer) => {
@@ -216,9 +179,7 @@
     });
   }, appearOptions);
   faders.forEach(fader => appearOnScroll.observe(fader));
+</script>
 
-  // Form submission with captcha
-  async function handleFormSubmit(formId, captchaId) {
-    const form = document.getElementById(formId);
-    const captcha = document.getElementById(captchaId);
-    const message = form.nextElementSibling;
+</body>
+</html>
