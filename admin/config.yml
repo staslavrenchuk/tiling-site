@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
-  branch: main   # если у тебя ветка master — замени на master
+  name: github
+  repo: staslavrenchuk/tiling-site
+  branch: main
+
 
 media_folder: "images/uploads"   # файлы будут храниться в репозитории
 public_folder: "./images/uploads"
@@ -35,3 +37,4 @@ collections:
         name: "about"
         fields:
           - { name: "body", label: "Описание", widget: "markdown" }
+
