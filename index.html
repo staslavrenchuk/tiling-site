@@ -11,13 +11,13 @@
 <body class="bg-gray-100 text-gray-900">
 
 <!-- Hero Section -->
-<section id="hero" class="flex flex-col items-center justify-center h-[50vh] text-center px-4 bg-cover bg-center relative scroll-fade opacity-0 translate-y-8 transition-all duration-700" style="background-image: url('images/hero-bg.jpg');">
+<section id="hero" class="flex flex-col items-center justify-center min-h-screen text-center px-4 bg-cover bg-center relative scroll-fade opacity-0 translate-y-8 transition-all duration-700" style="background-image: url('images/hero-bg.jpg');">
   <div class="absolute inset-0 bg-black bg-opacity-40"></div>
   <div class="relative z-10">
     <h1 class="text-xl sm:text-3xl md:text-4xl font-bold mb-6 text-white">Облицовка керамогранитом любого формата в Минске и не только</h1>
     <div class="flex gap-4 justify-center flex-wrap">
-      <button onclick="document.getElementById('phoneModal').classList.remove('hidden')" class="px-6 py-3 bg-blue-600 text-white rounded-2xl shadow hover:bg-blue-700">Позвонить</button>
-      <button onclick="document.getElementById('formModal').classList.remove('hidden')" class="px-6 py-3 bg-green-600 text-white rounded-2xl shadow hover:bg-green-700">Оставить заявку</button>
+      <button aria-label="Позвонить" onclick="document.getElementById('phoneModal').classList.remove('hidden')" class="px-6 py-3 bg-blue-600 text-white rounded-2xl shadow hover:bg-blue-700">Позвонить</button>
+      <button aria-label="Оставить заявку" onclick="document.getElementById('formModal').classList.remove('hidden')" class="px-6 py-3 bg-green-600 text-white rounded-2xl shadow hover:bg-green-700">Оставить заявку</button>
     </div>
   </div>
 </section>
@@ -25,158 +25,135 @@
 <!-- About Section -->
 <section class="py-16 bg-white text-gray-900">
   <div class="container mx-auto px-4 max-w-5xl">
-    <!-- Заголовок -->
-    <h2 class="text-2xl md:text-3xl font-bold text-center mb-6">
-      О компании
-    </h2>
-
-    <!-- Описание -->
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-6">О компании</h2>
     <div class="text-lg text-center max-w-3xl mx-auto mb-12 space-y-4">
-      <p>
-        Мы специализируемся на облицовке керамогранитом любой сложности — от стандартных решений до уникальных дизайнерских проектов. 
-        Работаем как в Минске, так и по всей территории Беларуси, выезжаем на объекты любой масштабности.
-      </p>
-      <p>
-        Основное направление нашей работы — <span class="font-semibold">сложные проекты с крупноформатным и максиформатным керамогранитом</span>. 
-        Такие материалы требуют высокой квалификации, точности и профессионального оборудования, поэтому мы делаем акцент именно на этом сегменте.
-      </p>
-      <p>
-        Наша цель — создавать надежные и эстетичные поверхности, которые сохраняют идеальный вид долгие годы. 
-        Мы ценим качество, аккуратность и внимание к деталям — и именно за это нас рекомендуют клиенты.
-      </p>
+      <p>Мы специализируемся на облицовке керамогранитом любой сложности — от стандартных решений до уникальных дизайнерских проектов. Работаем как в Минске, так и по всей территории Беларуси.</p>
+      <p>Основное направление нашей работы — <span class="font-semibold">сложные проекты с крупноформатным и максиформатным керамогранитом</span>. Такие материалы требуют высокой квалификации и профессионального оборудования.</p>
+      <p>Наша цель — создавать надежные и эстетичные поверхности, которые сохраняют идеальный вид долгие годы.</p>
     </div>
-
-    <!-- Три окна под фото -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-gray-300 rounded-2xl aspect-[4/3] flex items-center justify-center text-gray-600">
-        Фото 1
-      </div>
-      <div class="bg-gray-300 rounded-2xl aspect-[4/3] flex items-center justify-center text-gray-600">
-        Фото 2
-      </div>
-      <div class="bg-gray-300 rounded-2xl aspect-[4/3] flex items-center justify-center text-gray-600">
-        Фото 3
-      </div>
+      <div role="img" aria-label="Фото объекта 1" class="bg-gray-200 rounded-2xl aspect-[4/3] flex items-center justify-center text-gray-500">Фото 1</div>
+      <div role="img" aria-label="Фото объекта 2" class="bg-gray-200 rounded-2xl aspect-[4/3] flex items-center justify-center text-gray-500">Фото 2</div>
+      <div role="img" aria-label="Фото объекта 3" class="bg-gray-200 rounded-2xl aspect-[4/3] flex items-center justify-center text-gray-500">Фото 3</div>
     </div>
   </div>
 </section>
-
 
 <!-- Services Section -->
 <section id="services" class="py-16 bg-gray-50 text-gray-900 scroll-fade opacity-0 translate-y-8 transition-all duration-700">
   <div class="container mx-auto px-4 max-w-6xl">
     <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Наши услуги</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
       <div class="bg-white rounded-2xl shadow p-6 text-center hover:shadow-lg transition">
-        <div class="w-16 h-16 mx-auto rounded-lg mb-4 bg-[#6E7B7C]"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto mb-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h3v3H4a1 1 0 01-1-1zM3 11a1 1 0 011-1h3v3H4a1 1 0 01-1-1zM3 18a1 1 0 011-1h3v3H4a1 1 0 01-1-1zM10 4h10v16H10V4z"/></svg>
         <h3 class="font-semibold mb-2">Облицовка керамической плиткой</h3>
-        <p class="text-gray-600">от 00 руб/м²</p>
+        <p class="text-gray-600">По запросу</p>
       </div>
+
       <div class="bg-white rounded-2xl shadow p-6 text-center hover:shadow-lg transition">
-        <div class="w-16 h-16 mx-auto rounded-lg mb-4 bg-[#6E7B7C]"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto mb-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"/></svg>
         <h3 class="font-semibold mb-2">Облицовка керамогранитом</h3>
-        <p class="text-gray-600">от 00 руб/м²</p>
+        <p class="text-gray-600">По запросу</p>
       </div>
+
       <div class="bg-white rounded-2xl shadow p-6 text-center hover:shadow-lg transition">
-        <div class="w-16 h-16 mx-auto rounded-lg mb-4 bg-[#6E7B7C]"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto mb-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
         <h3 class="font-semibold mb-2">Цементная затирка</h3>
-        <p class="text-gray-600">от 00 руб/м²</p>
+        <p class="text-gray-600">По запросу</p>
       </div>
+
       <div class="bg-white rounded-2xl shadow p-6 text-center hover:shadow-lg transition">
-        <div class="w-16 h-16 mx-auto rounded-lg mb-4 bg-[#6E7B7C]"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto mb-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/></svg>
         <h3 class="font-semibold mb-2">Эпоксидная затирка</h3>
-        <p class="text-gray-600">от 00 руб/м²</p>
+        <p class="text-gray-600">По запросу</p>
       </div>
+
       <div class="bg-white rounded-2xl shadow p-6 text-center hover:shadow-lg transition">
-        <div class="w-16 h-16 mx-auto rounded-lg mb-4 bg-[#6E7B7C]"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto mb-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
         <h3 class="font-semibold mb-2">Запил углов под 45°</h3>
-        <p class="text-gray-600">от 00 руб/п.м.</p>
+        <p class="text-gray-600">По запросу</p>
       </div>
+
       <div class="bg-white rounded-2xl shadow p-6 text-center hover:shadow-lg transition">
-        <div class="w-16 h-16 mx-auto rounded-lg mb-4 bg-[#6E7B7C]"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto mb-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
         <h3 class="font-semibold mb-2">Формирование внешних углов</h3>
-        <p class="text-gray-600">от 00 руб/п.м.</p>
+        <p class="text-gray-600">По запросу</p>
       </div>
+
       <div class="bg-white rounded-2xl shadow p-6 text-center hover:shadow-lg transition">
-        <div class="w-16 h-16 mx-auto rounded-lg mb-4 bg-[#6E7B7C]"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto mb-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6h13M4 19h5V6H4v13z"/></svg>
         <h3 class="font-semibold mb-2">Гидроизоляция</h3>
-        <p class="text-gray-600">от 00 руб/м²</p>
+        <p class="text-gray-600">По запросу</p>
       </div>
+
       <div class="bg-white rounded-2xl shadow p-6 text-center hover:shadow-lg transition">
-        <div class="w-16 h-16 mx-auto rounded-lg mb-4 bg-[#6E7B7C]"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto mb-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
         <h3 class="font-semibold mb-2">Прочие сопутствующие работы</h3>
-        <p class="text-gray-600">от 00 руб</p>
+        <p class="text-gray-600">По запросу</p>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ==================== Портфолио ==================== -->
+<!-- Portfolio Section -->
 <section class="py-16 bg-white text-gray-900">
   <div class="container mx-auto px-4 max-w-6xl">
     <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Портфолио</h2>
-
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-      <!-- Объект 1 -->
       <div class="relative rounded-2xl overflow-hidden group">
-        <img src="images/uploads/placeholder-portfolio.jpg" alt="Объект 1: Кухня" class="w-full h-auto">
+        <img src="images/uploads/placeholder-portfolio.jpg" alt="Объект 1: Кухня" class="w-full h-auto transition-transform duration-300 group-hover:scale-105">
         <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
           <p class="text-white text-lg font-semibold">Объект 1: Кухня</p>
         </div>
       </div>
 
-      <!-- Объект 2 -->
       <div class="relative rounded-2xl overflow-hidden group">
-        <img src="images/uploads/placeholder-portfolio.jpg" alt="Объект 2: Ванная" class="w-full h-auto">
+        <img src="images/uploads/placeholder-portfolio.jpg" alt="Объект 2: Ванная" class="w-full h-auto transition-transform duration-300 group-hover:scale-105">
         <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
           <p class="text-white text-lg font-semibold">Объект 2: Ванная</p>
         </div>
       </div>
 
-      <!-- Объект 3 -->
       <div class="relative rounded-2xl overflow-hidden group">
-        <img src="images/uploads/placeholder-portfolio.jpg" alt="Объект 3: Фасад" class="w-full h-auto">
+        <img src="images/uploads/placeholder-portfolio.jpg" alt="Объект 3: Фасад" class="w-full h-auto transition-transform duration-300 group-hover:scale-105">
         <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
           <p class="text-white text-lg font-semibold">Объект 3: Фасад</p>
         </div>
       </div>
 
-      <!-- Объект 4 -->
       <div class="relative rounded-2xl overflow-hidden group">
-        <img src="images/uploads/placeholder-portfolio.jpg" alt="Объект 4: Холл" class="w-full h-auto">
+        <img src="images/uploads/placeholder-portfolio.jpg" alt="Объект 4: Холл" class="w-full h-auto transition-transform duration-300 group-hover:scale-105">
         <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
           <p class="text-white text-lg font-semibold">Объект 4: Холл</p>
         </div>
       </div>
 
-      <!-- Объект 5 -->
       <div class="relative rounded-2xl overflow-hidden group">
-        <img src="images/uploads/placeholder-portfolio.jpg" alt="Объект 5: Офис" class="w-full h-auto">
+        <img src="images/uploads/placeholder-portfolio.jpg" alt="Объект 5: Офис" class="w-full h-auto transition-transform duration-300 group-hover:scale-105">
         <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
           <p class="text-white text-lg font-semibold">Объект 5: Офис</p>
         </div>
       </div>
 
-      <!-- Объект 6 -->
       <div class="relative rounded-2xl overflow-hidden group">
-        <img src="images/uploads/placeholder-portfolio.jpg" alt="Объект 6: Балкон" class="w-full h-auto">
+        <img src="images/uploads/placeholder-portfolio.jpg" alt="Объект 6: Балкон" class="w-full h-auto transition-transform duration-300 group-hover:scale-105">
         <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
           <p class="text-white text-lg font-semibold">Объект 6: Балкон</p>
         </div>
       </div>
 
-      <!-- Объект 7 -->
       <div class="relative rounded-2xl overflow-hidden group">
-        <img src="images/uploads/placeholder-portfolio.jpg" alt="Объект 7: Коридор" class="w-full h-auto">
+        <img src="images/uploads/placeholder-portfolio.jpg" alt="Объект 7: Коридор" class="w-full h-auto transition-transform duration-300 group-hover:scale-105">
         <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
           <p class="text-white text-lg font-semibold">Объект 7: Коридор</p>
         </div>
       </div>
 
-      <!-- Объект 8 -->
       <div class="relative rounded-2xl overflow-hidden group">
-        <img src="images/uploads/placeholder-portfolio.jpg" alt="Объект 8: Санузел" class="w-full h-auto">
+        <img src="images/uploads/placeholder-portfolio.jpg" alt="Объект 8: Санузел" class="w-full h-auto transition-transform duration-300 group-hover:scale-105">
         <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
           <p class="text-white text-lg font-semibold">Объект 8: Санузел</p>
         </div>
@@ -186,7 +163,7 @@
   </div>
 </section>
 
-<!-- Contact Section -->
+<!-- Contacts Section -->
 <section id="contacts" class="py-16 bg-gray-50 text-gray-900 scroll-fade opacity-0 translate-y-8 transition-all duration-700">
   <div class="container mx-auto px-4 max-w-5xl">
     <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Контакты</h2>
@@ -216,6 +193,7 @@
     <button onclick="document.getElementById('phoneModal').classList.add('hidden')" class="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700">Закрыть</button>
   </div>
 </div>
+
 <div id="formModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
   <div class="bg-white rounded-2xl shadow-lg p-6 max-w-md w-full">
     <h2 class="text-xl font-bold mb-4 text-center">Оставьте заявку</h2>
@@ -244,9 +222,12 @@
     });
   }, appearOptions);
   faders.forEach(fader => appearOnScroll.observe(fader));
+
+  ['phoneModal','formModal'].forEach(id => {
+    const modal = document.getElementById(id);
+    modal.addEventListener('click', e => { if(e.target === modal) modal.classList.add('hidden'); });
+  });
 </script>
 
 </body>
 </html>
-
-
